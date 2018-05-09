@@ -207,7 +207,7 @@ program licom
     time_length = 3*3600     !in seconds
     time_step = 1800         !in seconds
 
-    call register_component_coupling_configuration(decomp_size, sst_l, shf_l, ssh_l, mld_l, time_step, licom_comp_id)
+    call register_component_coupling_configuration(decomp_size, sst_l, shf_l, ssh_l, mld_l, time_step, licom_comp_id, "licom", import_interface_id, export_interface_id)
 
     !assign variables for model processing
     allocate(sstm(decomp_size),shfm(decomp_size))
