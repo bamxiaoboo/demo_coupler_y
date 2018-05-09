@@ -201,6 +201,8 @@ program licom
     call scatter_field(ssh, ssh_l, local_grid_cell_index, decomp_size, masterproc, ier)
     call scatter_field(mld, mld_l, local_grid_cell_index, decomp_size, masterproc, ier)
 
+    call register_grids(latlen, lonlen, lat, lon)
+
     !------------Entering time loop-----------------------------
     time_length = 3*3600     !in seconds
     time_step = 1800         !in seconds
